@@ -1,0 +1,412 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Navbar */
+.navbar {
+    background: #333;
+    height: 100px; /* Lock the navbar height */
+    padding: 0; /* Remove extra padding */
+    position: relative;
+    overflow: hidden; /* Prevent content from pushing the navbar height */
+}
+
+.navbar_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Ensure alignment of items within the fixed navbar */
+    height: 100%;/* Match the height of the navbar */
+    width: 90%;
+    margin: auto;
+}
+
+#navbar_logo img {
+    height: 290px; /* Adjust the height as needed for the logo */
+    max-height: 100%; /* Ensure it doesn't overflow the navbar */
+    width: auto; /* Maintain aspect ratio */
+}
+
+.navbar_menu {
+    display: flex;
+    list-style: none;
+}
+
+.navbar_menu li {
+    margin: 0 20px;
+}
+
+.navbar_links {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.navbar_btn {
+    background-color: #38b6ff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #000;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+}
+#hero_video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.hero_content {
+    position: relative;
+    z-index: 1;
+}
+.hero_btn {
+    background-color: #38b6ff;
+    padding: 12px 24px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.hero_btn {
+    background-color: #38b6ff;
+    padding: 12px 24px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Services Section */
+.services {
+    padding: 50px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.services_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.service_item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.service_item h3 {
+    margin-top: 15px;
+    font-size: 1.5rem;
+}
+
+/* projects Section */
+.projects {
+    padding: 50px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.projects h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+.projects_row {
+    display: flex;
+    justify-content: center; /* Align items horizontally in the center */
+    gap: 20px; /* Space between the items */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.projects_item {
+    margin-bottom: 30px;
+    font-style: italic;
+    flex: 1 1 300px; /* Makes each item take up at least 300px, responsive */
+    max-width: 400px; /* Ensure a maximum width for each item */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align items */
+    justify-content: flex-start; /* Align the content to the top */
+    
+}
+.image-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Ensure both images are the same size */
+.projects_item img {
+    width: 100%;
+    max-width: 400px; /* Set a max-width to prevent images from becoming too large */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure uniformity in the visible content */
+}
+/* Add consistency to items that don't have <h3> */
+.projects_item > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensure it takes up the full height */
+}
+
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer_container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.social_icons img {
+    height: 30px;
+    margin: 0 10px;
+}
+/* Container for the entire projects section */
+.projects {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 90%;
+    position: relative;
+}
+
+/* Outer container for scrollable content */
+.projects_container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Scrollable row for project items */
+.projects_row {
+    display: flex;
+    overflow-x: hidden; /* Hide overflowing images */
+    scroll-behavior: smooth; /* Smooth scrolling for arrow navigation */
+    gap: 20px;
+    width: 100%; /* Match container width */
+}
+
+/* Individual project items */
+.projects_item {
+    min-width: 300px; /* Minimum width of each item */
+    flex-shrink: 0; /* Prevent items from shrinking */
+}
+.contact {
+    padding: 50px;
+    background-color: #fff;
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.contact h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.contact_details p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.contact_form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact_form input,
+.contact_form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact_form button {
+    align-self: center;
+    background-color: #38b6ff;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.contact_form button:hover {
+    background-color: #2a93d1;
+}
+
+
+/* Mobile-first approach */
+
+/* Adjusting Navbar for small screens */
+@media only screen and (max-width: 768px) {
+    .navbar_container {
+        flex-direction: column; /* Stack navbar items */
+        align-items: flex-start; /* Align items to the left */
+        height: auto; /* Adjust height */
+    }
+
+    #navbar_logo img {
+        height: 150px; /* Adjust logo size */
+    }
+
+    .navbar_menu {
+        display: flex;
+        flex-direction: column; /* Stack menu items vertically */
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar_menu li {
+        margin: 10px 0;
+    }
+
+    .navbar_links {
+        font-size: 1rem; /* Reduce font size */
+        padding: 10px 0;
+    }
+}
+
+/* Adjusting Hero Section for mobile */
+@media only screen and (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem; /* Reduce heading size */
+    }
+
+    .hero p {
+        font-size: 1.2rem; /* Reduce paragraph size */
+    }
+
+    .hero_btn {
+        padding: 10px 20px; /* Adjust button size */
+    }
+
+    #hero_video {
+        object-fit: cover; /* Keep video responsive */
+    }
+}
+
+/* Services Section - Adjust grid layout for smaller screens */
+@media only screen and (max-width: 768px) {
+    .services_grid {
+        grid-template-columns: 1fr 1fr; /* Two columns */
+    }
+
+    .service_item h3 {
+        font-size: 1.2rem; /* Adjust text size */
+    }
+}
+
+/* Projects Section - Adjust the layout for small screens */
+@media only screen and (max-width: 768px) {
+    .projects_row {
+        flex-direction: column; /* Stack project items vertically */
+        gap: 15px;
+    }
+
+    .projects_item {
+        max-width: 100%; /* Allow items to be full width */
+    }
+
+    .projects_item img {
+        width: 100%; /* Make images responsive */
+    }
+}
+
+/* Footer Section - Adjust footer for smaller screens */
+@media only screen and (max-width: 768px) {
+    .footer_container {
+        padding: 10px; /* Reduce padding */
+    }
+
+    .social_icons img {
+        height: 25px; /* Adjust icon size */
+    }
+}
+/* Hamburger menu */
+.navbar_toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.navbar_toggle .bar {
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    margin: 5px 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar_toggle {
+        display: flex;
+    }
+
+    .navbar_menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar_menu.active {
+        display: flex;
+    }
+}
